@@ -46,3 +46,7 @@ const hide = () =>{
 }
 
 document.querySelector(".nav-btn").addEventListener("click",hide)
+
+
+
+

@@ -10,7 +10,7 @@
     grid-template-columns: repeat( auto-fit, minmax(20rem, 1fr) );
     justify-content: center;
     justify-items: center;
-    grid-gap: 1rem;
+    grid-gap: 3rem 1rem;
     margin: 4rem 0;
   }
   
