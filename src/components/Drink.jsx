@@ -7,9 +7,6 @@ const json = await response.json();
 const menu = json.data
 
 
-
-
-
 export const Drink = ()=>{
     return(
 
@@ -31,7 +28,7 @@ export const Drink = ()=>{
           </div>
           <form className="drink__controls">
             <input type="hidden" className="order-id" value="0" />
-            <button className="order-btn">
+            <button data-id={item.id} className="order-btn">
               Objednat
             </button>
           </form>
