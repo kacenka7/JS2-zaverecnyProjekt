@@ -61,3 +61,7 @@ a {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
+
+.hide{
+  display: none;
+}

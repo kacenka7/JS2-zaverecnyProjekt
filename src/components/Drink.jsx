@@ -28,7 +28,7 @@ export const Drink = ()=>{
           </div>
           <form className="drink__controls">
             <input type="hidden" className="order-id" value="0" />
-            <button data-id={item.id} className="order-btn">
+            <button data-id={item.id} className="order-btn" >
               Objednat
             </button>
           </form>

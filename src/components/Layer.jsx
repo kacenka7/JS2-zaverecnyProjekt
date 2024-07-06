@@ -1,4 +1,4 @@
-
+import './Layer.css';
 
 export const Layer = (color, label)=>{
     

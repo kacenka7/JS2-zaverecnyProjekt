@@ -48,9 +48,28 @@ const hide = () =>{
 
 document.querySelector(".nav-btn").addEventListener("click",hide)
 
-//Objednací tlačítko
+// Načtení aktuální API a naformátovaní tlačítka
 
-const orderButon = document.querySelectorAll(".order-btn")
+// const orderButon = document.querySelectorAll(".order-btn")
+
+// const response = await  fetch ('http://localhost:4000/api/drinks')
+// const json = await response.json()
+// const api = json.data
+
+// console.log(api)
+
+// api.map((item)=>{
+//   if(item.ordered===false){
+//     orderButon.innerText = 'Objednat';
+//     orderButon.classList.remove("order-btn--ordered")
+//   }
+//   else{
+//     orderButon.{item.id}.innerText = 'Objednáno';
+//     orderButon.{item.id}.classList.add("order-btn--ordered")
+//   }
+// })
+
+//Objednací tlačítko
 
 orderButon.forEach((btn)=>{
   btn.addEventListener("click", (e)=>{                          //přidání listeneru
@@ -117,6 +136,9 @@ orderButon.forEach((btn)=>{
   }
 )})
 
+//Změna hlavičky - Hl. stránka vs Objednávka
+
+document.querySelector(".home-btn").classList.add("hide")
 
 
 
