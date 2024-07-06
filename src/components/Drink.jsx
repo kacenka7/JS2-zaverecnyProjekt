@@ -1,8 +1,13 @@
+import './Drink.css';
+import {Layer} from "./Layer"
+
+
 const response = await fetch('http://localhost:4000/api/drinks');
 const json = await response.json();
 const menu = json.data
 
-import { Layer } from "./layer";
+
+
 
 
 export const Drink = ()=>{
@@ -19,8 +24,7 @@ export const Drink = ()=>{
               <h3>{item.name}</h3>
 
             {item.layers.map ((layer) => {
-                Layer(layer.color, layer.label)
-                
+              <Layer key={item.id} color={layer.color} label={layer.label} />
             })}
             
             </div>

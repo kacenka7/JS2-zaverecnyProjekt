@@ -1,4 +1,4 @@
-
+import './Menu.css';
 import { Drink } from "./Drink"
 
 export const Menu =()=>{
