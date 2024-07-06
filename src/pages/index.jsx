@@ -50,7 +50,7 @@ document.querySelector(".nav-btn").addEventListener("click",hide)
 
 // Načtení aktuální API a naformátovaní tlačítka
 
-// const orderButon = document.querySelectorAll(".order-btn")
+  const orderButon = document.querySelectorAll(".order-btn")
 
 // const response = await  fetch ('http://localhost:4000/api/drinks')
 // const json = await response.json()
