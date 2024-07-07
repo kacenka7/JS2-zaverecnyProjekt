@@ -21,18 +21,14 @@ import { Contact } from '../components/Contact';
 
 document.querySelector('#root').innerHTML = render(
   <div className="page">
-
     <Header/>
-
     <main>
       <Banner/>
       <Menu/>
       <Gallery/>
       <Contact/>
     </main>
-
   <Footer/>
-    
   </div>
 );
 
@@ -48,30 +44,11 @@ const hide = () =>{
 
 document.querySelector(".nav-btn").addEventListener("click",hide)
 
-// Načtení aktuální API a naformátovaní tlačítka
-
-  const orderButon = document.querySelectorAll(".order-btn")
-
-// const response = await  fetch ('http://localhost:4000/api/drinks')
-// const json = await response.json()
-// const api = json.data
-
-// console.log(api)
-
-// api.map((item)=>{
-//   if(item.ordered===false){
-//     orderButon.innerText = 'Objednat';
-//     orderButon.classList.remove("order-btn--ordered")
-//   }
-//   else{
-//     orderButon.{item.id}.innerText = 'Objednáno';
-//     orderButon.{item.id}.classList.add("order-btn--ordered")
-//   }
-// })
-
 //Objednací tlačítko
 
-orderButon.forEach((btn)=>{
+const orderButons = document.querySelectorAll(".order-btn")
+
+orderButons.forEach((btn)=>{
   btn.addEventListener("click", (e)=>{                          //přidání listeneru
     e.preventDefault()
     const buttonId=e.target.dataset.id
@@ -140,7 +117,25 @@ orderButon.forEach((btn)=>{
 
 document.querySelector(".home-btn").classList.add("hide")
 
+// Načtení aktuální API a naformátovaní tlačítka
 
+// const response = await  fetch ('http://localhost:4000/api/drinks')
+// const json = await response.json()
+// const api = json.data
+
+// api.map((item)=>{
+//   if(item.ordered===false){
+
+//     const orderButon = document.querySelectorAll(`#${item.name}`)
+
+//     orderButon.innerText = 'Objednat';
+//     // orderButon.classList.remove("order-btn--ordered");
+//   }
+//   else{
+//     orderButon.innerText = 'Objednáno';
+//     // orderButon.classList.add("order-btn--ordered")
+//   }
+// })
 
 
 

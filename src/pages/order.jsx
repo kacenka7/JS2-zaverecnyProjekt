@@ -24,11 +24,10 @@ order.map((item)=>{
     orderList.push({
         id: item.id,
         name: item.name,
-        image: (`http://localhost:4000/api/drinks${item.image}`)
+        image: item.image
     })
   }
 })
-
 
 
 //Vypsání do HTML
@@ -49,3 +48,10 @@ document.querySelector('#root').innerHTML = render(
 //Změna hlavičky - Hl. stránka vs Objednávka
 
 document.querySelector(".nav-links").classList.add("hide")
+
+// zobrazení nemáte nic objednáno
+
+
+// if (orderList.item.length < 0) {
+//   document.querySelector(".empty-order".classList.add("hide"))
+// }
