@@ -119,23 +119,21 @@ document.querySelector(".home-btn").classList.add("hide")
 
 // Načtení aktuální API a naformátovaní tlačítka
 
-// const response = await  fetch ('http://localhost:4000/api/drinks')
-// const json = await response.json()
-// const api = json.data
+const response = await  fetch ('http://localhost:4000/api/drinks')
+const json = await response.json()
+const api = json.data
 
-// api.map((item)=>{
-//   if(item.ordered===false){
-
-//     const orderButon = document.querySelectorAll(`#${item.name}`)
-
-//     orderButon.innerText = 'Objednat';
-//     // orderButon.classList.remove("order-btn--ordered");
-//   }
-//   else{
-//     orderButon.innerText = 'Objednáno';
-//     // orderButon.classList.add("order-btn--ordered")
-//   }
-// })
+api.map((item)=>{
+  let orderButon = document.querySelector(`[data-id="${item.id}"]`)
+  if(item.ordered===false){
+    orderButon.innerText = 'Objednat';
+    orderButon.classList.remove("order-btn--ordered");
+  }
+  else{
+    orderButon.innerText = 'Objednáno';
+    orderButon.classList.add("order-btn--ordered")
+  }
+})
 
 
 

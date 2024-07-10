@@ -8,19 +8,32 @@ const OrderItem = ({name, image}) => {
   )
 }
 
-export const Order = (orderList)=>{
+export const Order = ({orderList})=>{
     console.log(orderList)
-    return(
-    <main className="order">
-        <div className="container order__content">
-          <h1>Vaše objedávnka</h1>
-          <p className="empty-order">Zatím nemáte nic objednáno</p>
-          <div className="order__items">
-            {orderList.item.map ((item) => (
-                <OrderItem name = {item.name} image = {item.image} />  
-            ))}
+    console.log(orderList.length)
+
+      {if (orderList.length < 1){
+        return(
+        <main className="order">
+          <div className="container order__content">
+            <h1>Vaše objedávnka</h1>
+            <p className="empty-order">Zatím nemáte nic objednáno</p>
           </div>
-        </div>
-      </main>
-    )
+        </main>
+        
+      )}
+
+      else{
+        return(
+        <main className="order">
+          <div className="container order__content">
+           <h1>Vaše objedávnka</h1>
+            <div className="order__items">
+              {orderList.map ((item) => (
+                  <OrderItem name = {item.name} image = {item.image} />  
+              ))}
+            </div>
+          </div>
+        </main>
+    )}}
 }

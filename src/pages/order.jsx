@@ -38,7 +38,7 @@ document.querySelector('#root').innerHTML = render(
 
       <Header showMenu = "false"/>
 
-      <Order item = {orderList}/>
+      <Order orderList = {orderList}/>
 
       <Footer/>
     </div>
@@ -49,9 +49,3 @@ document.querySelector('#root').innerHTML = render(
 
 document.querySelector(".nav-links").classList.add("hide")
 
-// zobrazení nemáte nic objednáno
-
-
-// if (orderList.item.length < 0) {
-//   document.querySelector(".empty-order".classList.add("hide"))
-// }
